@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'AmbleRegular';
+    src: url('fonts/AmbleRegular.ttf') format('truetype'),
+         url('fonts/AmbleRegular.svg#AmbleRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'NewShape';
+    src: url('fonts/NewShape.ttf') format('truetype'),
+         url('fonts/NewShape.svg#NewShape') format('svg');
+}
+
+@font-face {
+    font-family: 'SourceCodeProRegular';
+    src: url('fonts/SourceCodeProRegular.ttf') format('truetype'),
+         url('fonts/SourceCodeProRegular.svg#SourceCodeProRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'pacfontregular';
+    src: url('./fonts/pacfont-webfont.woff2') format('woff2'),
+         url('./fonts/pacfont-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

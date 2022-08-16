@@ -1,0 +1,143 @@
+/* https://www.google.com/search?q=how+to+place+first+element+on+the+second+place+from+the+top&rlz=1C1CHBF_enSK883SK883&oq=how+to+place+first+element+on+the+second+place+from+the+top&aqs=chrome..69i57j33i160.17568j0j7&sourceid=chrome&ie=UTF-8 */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0px auto;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(168,167,167,1) 0%, rgba(168,167,167,1) 11%, rgba(204,82,122,0.4) 20%, rgba(232,23,93,0.3) 27%, rgba(71,71,71,1) 43%, rgba(71,71,71,1) 100%);
+    /* https://css-tricks.com/the-fixed-background-attachment-hack/ */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: grey;
+    background-size: cover;
+    color:floralwhite; 
+    font-family: 'SourceCodeProRegular';
+  
+} 
+
+
+/* hack to make fixed non transparent header with inhereted bacground*/
+.header1{
+    box-sizing: content-box;
+    position: sticky;
+    top: 0;
+    display: block;
+    max-width:inherit;
+    background:inherit;   
+    margin-bottom: 0.5rem;
+    height: min(17vw, 17vh);
+    padding-bottom:5px;
+}
+
+/* https://stackoverflow.com/questions/6529421/hide-scrollable-content-behind-transparent-fixed-position-divs-when-scrolling-th */
+
+
+.header1 h2 {
+    display: inline-block;
+    max-width: 49vw;
+    line-height: 1em;
+    padding: 0 0rem 0 3vw;
+    padding-top: min(2vh, 2vw);
+    color: rgba(51,51,51,1);
+    font-family: 'pacfontregular';
+    font-size: min(7vw, 7vh);
+    margin-top: 0;  
+}
+
+.golf{
+    max-height: min(17vw, 17vh);
+    max-width: 42vw;
+    display:block;
+    margin-left: auto;
+    margin-bottom: auto;
+    float: right;
+}
+
+.articles {
+    box-sizing: content-box;
+    width: auto;
+    display:inline-block;
+    margin-bottom: 4rem;
+    height: 93.5vh;
+    padding: 0vw 3vw 3vw 3vw;
+    text-align:left;
+    min-width: 80px;
+    font-size: smaller; 
+    
+}
+
+.maincontent{
+    padding-top: 3vw;
+    padding-bottom: 0.7rem;
+    margin-bottom: 0.5vh;
+}
+
+.techdata {
+    min-width: 80px;
+    padding-top: 3vw;
+    background-color: transparent;
+    background: transparent;
+    color: black;      
+}
+
+
+.techdata .table1 { 
+    display: block;
+    height: auto;
+    overflow: hidden;
+    
+    
+}
+
+.techdata .tableflex {
+    display: flex;
+    max-width: 90vw;
+}
+
+.table1headers {
+    display: block;
+    min-width: fit-content;
+    height: 130px;
+}
+
+.table1content {
+    display: block;
+    overflow-x: scroll;
+    height: 130px;
+}
+table {
+    border: 1px solid red;
+  }
+  
+td {
+    box-sizing: content-box;
+    border: 1px solid blue;
+    width: inherit;
+    max-width: 150px;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.articles h3{
+    padding-top: 3vw;
+}
+
+@media screen and (min-width: 600px) {
+
+     .container{
+        max-width: 800px;
+    }
+
+    .table1 { 
+        display: none;
+      }
+}
+

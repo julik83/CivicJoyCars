@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'NewShape';
+    src: url('fonts/NewShape.eot');
+    src: url('fonts/NewShape.eot') format('embedded-opentype'),
+         url('fonts/NewShape.woff2') format('woff2'),
+         url('fonts/NewShape.woff') format('woff'),
+         url('fonts/NewShape.ttf') format('truetype'),
+         url('fonts/NewShape.svg#NewShape') format('svg');
+}
