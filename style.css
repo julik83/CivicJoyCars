@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+/*hack for fixed on viewport bacground*/
 .container {
     margin: 0px auto;
     min-height: 100vh;
@@ -19,52 +20,45 @@
     background-size: cover;
     color:floralwhite; 
     font-family: 'SourceCodeProRegular';
-  
 } 
 
-
-/* hack to make fixed non transparent header with inhereted bacground*/
 .header1{
-    box-sizing: content-box;
     position: sticky;
     top: 0;
     display: block;
     max-width:inherit;
     background:inherit;   
     margin-bottom: 0.5rem;
-    height: min(17vw, 17vh);
+    height: min(17vw, 18vh);
     padding-bottom:5px;
 }
 
 /* https://stackoverflow.com/questions/6529421/hide-scrollable-content-behind-transparent-fixed-position-divs-when-scrolling-th */
 
-
 .header1 h2 {
     display: inline-block;
-    max-width: 49vw;
+    /* white-space: wrap; */
+    max-width: 50%;
     line-height: 1em;
     padding: 0 0rem 0 3vw;
     padding-top: min(2vh, 2vw);
     color: rgba(51,51,51,1);
     font-family: 'pacfontregular';
-    font-size: min(7vw, 7vh);
-    margin-top: 0;  
+    font-size: min(7vw, 7vh) ;
 }
 
 .golf{
     max-height: min(17vw, 17vh);
-    max-width: 42vw;
+    max-width: 40%;
     display:block;
-    margin-left: auto;
-    margin-bottom: auto;
     float: right;
 }
+
 
 .articles {
     box-sizing: content-box;
     width: auto;
     display:inline-block;
-    margin-bottom: 4rem;
     height: 93.5vh;
     padding: 0vw 3vw 3vw 3vw;
     text-align:left;
@@ -73,7 +67,7 @@
     
 }
 
-.maincontent{
+.history{
     padding-top: 3vw;
     padding-bottom: 0.7rem;
     margin-bottom: 0.5vh;
@@ -130,14 +124,46 @@ td {
     padding-top: 3vw;
 }
 
-@media screen and (min-width: 600px) {
+
+ @media screen and (min-width: 600px) {
 
      .container{
-        max-width: 800px;
+        max-width: 1000px;
+    }
+ }
+
+    /* 
+    .header1{
+        box-sizing: content-box;
+        position: sticky;
+        top: 0;
+        display: block;
+        max-width:inherit;
+        margin-bottom: 0.5rem;
+        height: min(17vw, 17vh);
+        padding-bottom:5px;
+    }
+    
+    /* https://stackoverflow.com/questions/6529421/hide-scrollable-content-behind-transparent-fixed-position-divs-when-scrolling-th */
+    
+    /* .header1 h2 {
+        display: inline-block;
+        max-width: 60%;
+        line-height: 1em;
+        padding: 0 0rem 0 3vw;
+        padding-top: min(2vh, 2vw);
+        font-size: min(8vw, 8vh); 
+    }
+    
+    .golf{
+        max-height: min(17vw, 17vh);
+        max-width: 40%;
+        display:block;
+        float: right;
     }
 
     .table1 { 
         display: none;
       }
-}
+} */ 
 
