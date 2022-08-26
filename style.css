@@ -5,29 +5,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 h3 {
     padding-bottom:1rem;
 }
 
-
-
-/*hack for fixed on viewport bacground*/
 .container {
     margin: 0px auto;
     min-height: 100vh;
-    background: linear-gradient(to bottom, rgba(168,167,167,1) 0%, rgba(168,167,167,1) 11%, rgba(204,82,122,0.4) 20%, rgba(232,23,93,0.3) 27%, rgba(71,71,71,1) 43%, rgba(71,71,71,1) 100%);
-    /* https://css-tricks.com/the-fixed-background-attachment-hack/ */
+    background: rgba(71,71,71,1);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: grey;
     background-size: cover;
     color:floralwhite; 
     font-family: 'SourceCodeProRegular';
     font-size: smaller;
-} 
+    max-width: 1300px;
+}
 
 .header1{
     box-sizing: content-box;
@@ -35,10 +32,14 @@ h3 {
     top: 0;
     display: block;
     max-width:inherit;
-    background:inherit;   
+    background: /*linear-gradient(to bottom, rgba(168,167,167,1) 0%, rgba(168,167,167,1) 11%, rgba(204,82,122,0.4) 20%, rgba(232,23,93,0.3) 27%, rgba(71,71,71,1) 43%, rgba(71,71,71,1) 100%); */
+    /*hack for fixed on viewport bacground*/
+    /* https://css-tricks.com/the-fixed-background-attachment-hack/ */
+    linear-gradient(to bottom, rgba(168,167,167,1) 20%,  rgba(204,82,122,0.8) 40%,  rgb(204,82,122,1) 60%, rgb(107, 58, 85) 90%, rgba(71,71,71,1) 100%); 
     margin-bottom: 0.5rem;
     height: min(17vw, 18vh);
     padding-bottom: 1vh;
+    z-index: 1;
 }
 
 /* https://stackoverflow.com/questions/6529421/hide-scrollable-content-behind-transparent-fixed-position-divs-when-scrolling-th */
@@ -63,9 +64,9 @@ h3 {
     float: right;
 }
 
-.history, .techdata, .whymk2 {
+.history, .techdata, .whymk2, .whatchout {
     box-sizing: content-box;
-    width: max(93vw);
+    width: max(93%);
     display:inline-block;
     padding: 3vw 3vw 1vh 3vw;
     text-align:left;
@@ -74,54 +75,106 @@ h3 {
 
 .table1 { 
     display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    overflow: hidden;
+    flex-wrap: nowrap;
     padding-bottom: 1rem;
     line-height: 1.8em;
-    font-size: small;
+    overflow: hidden;
 }
+
     
 .tableheaders {
-    flex-basis: 70px;
-    overflow: hidden;
-	flex-grow: 0;
-	flex-shrink: 0;  
+    box-sizing: content-box;
+    min-width: 180px;
+    padding-left: 3px;
+    padding-right: 5px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     border-left: 2px solid black;
+   
 }
+
 
 .tableheaders td {
     border-bottom: 1px solid #FF00FF;
     white-space: nowrap;
+    min-width: 180px;
 }
 
 .tablecontent {
-    /* https://usefulangle.com/post/351/css-flex-fixed-width-item */
-    display:flex;
-    flex-basis: 130px;
-	flex-grow: 0;
-	flex-shrink: 0;
-    overflow-x: auto; 
-    scroll-snap-type: x mandatory;
+    /* position: relative; ***************/
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     border-right: 2px solid black;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory;
+    /* in order to display whole info */
+    min-width: 300px;
 }
 
-.tablecontentcolumn {
-    flex-basis: 198px;
+.tablecontentspec {
+    /* https://usefulangle.com/post/351/css-flex-fixed-width-item */    
+    display:flex; 
+    margin-bottom: -2px;
+    width: 95%;
+    flex-wrap: nowrap;
+    /* float: right; */
+}
+
+
+
+.tablecontentspeccolumn {
+    /* flex-basis: 150px;
 	flex-grow: 0;
-	flex-shrink: 0;  
-    white-space: nowrap; 
+	flex-shrink: 0;  */
+    min-width: 195px;
+    flex: 1 1 auto;
+    overflow: hidden;
     scroll-snap-align: start;
-} 
-
-.tablecontentcolumn td{
-    border-bottom: 1px solid #FF00FF;
-    width: 150px;
 }
+
+.tablecontentspeccolumn td{
+    /* max-width: 150px; */
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: 1px solid #FF00FF;  
+}
+
+
+.tablecontentcommon {
+    position: sticky;
+    width: 100%;
+    left: 0px;
+    overflow: hidden;
+}
+
+.common {
+    width: 100%;
+    overflow: hidden;
+}
+
+.tablecontentcommon td{
+    border-bottom: 1px solid #FF00FF;
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+
+
+/* .common {
+    display: block;
+} */
+
+
+
+
+
+
+/* .tablecontentcolumn td{
+    border-bottom: 1px solid #FF00FF;
+    width: 100px;
+    overflow: hidden;
+} */
 
 .footer{
     box-sizing: content-box;
@@ -134,34 +187,47 @@ h3 {
     
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 2000px) {
      .container{
         max-width: 1150px;
         font-size: initial;
     }
 
     .tableheaders {
-        flex-basis: 100px;
+        flex-basis: 190px;
         overflow: hidden;
         flex-grow: 0;
         flex-shrink: 0;  
     }
     
-    .tableheaders td {
-        border-bottom: 1px solid #FF00FF;
-        white-space: nowrap;
-    }
-    
-    .tablecontent {
+    .tablecontentspec {
         /* https://usefulangle.com/post/351/css-flex-fixed-width-item */
         display:flex;
-        flex-basis: 200px;
+        flex-basis: 600px;
         flex-grow: 0;
         flex-shrink: 0;
     }
-    
+
+    .tablecontentspeccolumn {
+        flex-basis: 199px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        table-layout:fixed; 
+        width: 149px;
+        overflow: hidden; 
+        scroll-snap-align: start;
+        
+    }
+
+    td {  
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
  }
 
+
+ /*code for safary*/
 @media not all and (min-resolution:.001dpcm)
     { @supports (-webkit-appearance:none) and       (stroke-color:transparent) {
         .container { 
@@ -175,9 +241,6 @@ h3 {
         }
     }
 }
-
-
-
 
 
     /* 
