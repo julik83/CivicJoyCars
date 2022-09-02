@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 300px;
+}
+
+.table2 {
+    border: 1px solid red;
+    width: 40vw;
+    overflow-x: scroll;
+}
+
+.heading{
+    position: sticky;
+    left: 0;
+    background-color: aliceblue;
+}
+
+td {
+    min-width: 80px;
+    border-bottom: 1px solid purple;
+    word-break:break-word;
+    height: 3rem;
+    padding: 2px;
+}
+
+.commontd {
+    min-width: calc(40vw - 80px);
+}
+
+
+
+
+
+
+
+
