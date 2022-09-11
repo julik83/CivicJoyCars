@@ -122,7 +122,8 @@ h3 {
         min-width: 30vw;
         max-width: 30vw;
         background: grey;
-        border-bottom: 1px solid rgb(209, 47, 101);
+        border-bottom: 1px solid rgba(204,82,122,0.5);
+        border-right: 1px solid rgba(204,82,122,0.5); 
         padding-left: 5px;
         justify-content: left;   
     }
@@ -138,7 +139,7 @@ h3 {
         flex: 1;
         min-width: 30vw;
         scroll-snap-align:start;
-        border-bottom: 1px solid rgb(209, 47, 101);
+        border-bottom: 1px solid rgba(204,82,122,0.5);
     }
 
 
@@ -262,7 +263,8 @@ h3 {
             min-width: 15vw;
             max-width: 15vw;
             background: grey;
-            border: 1px solid red;
+            border-bottom: 1px solid rgba(204,82,122,0.5);
+            border-right: 1px solid rgba(204,82,122,0.5); 
             padding-left: 5px;
             justify-content: left;   
         }
@@ -278,7 +280,7 @@ h3 {
             flex: 1;
             min-width: 15vw;
             scroll-snap-align:start;
-            border: 1px solid red; 
+            border-bottom: 1px solid rgba(204,82,122,0.5);
         }
     
         /* https://elad.medium.com/css-position-sticky-how-it-really-works-54cd01dc2d46 */
@@ -286,7 +288,6 @@ h3 {
             /* margin-left: 0px; */
             position: sticky;
             left: 15vw;
-            background: pink;
             min-width: 15vw;
             max-width: 30vw;
             text-align: center;
@@ -297,7 +298,6 @@ h3 {
             flex-grow: 1;
             flex-shrink: 0;
             flex-basis: 0vw;
-            background: pink;  
         }
 
     .footer{
@@ -335,10 +335,6 @@ h3 {
         margin-left: -292px;
        }
    
-    th {
-           /* z-index: 10; */
-       }
-   
     .commondata {
            position: sticky;
            max-width: 292px; 
@@ -366,6 +362,12 @@ h3 {
             background-color: grey;
             background-size: cover;
         }
+
+        .commondata{
+            /* margin-left: 0px; */
+            background-color: rgba(204,82,122,0.5);
+        }
+        
     }
 }
 
