@@ -148,7 +148,7 @@ h3 {
         /* margin-left: 0px; */
         position: sticky;
         left: 30vw;
-        background-color: rgba(204,82,122,0.5);
+        background-color: rgb(129, 84, 109);
         min-width: 30vw;
         max-width: 60vw;
         
@@ -160,7 +160,7 @@ h3 {
         flex-grow: 1;
         flex-shrink: 0;
         flex-basis: 0vw;
-        background-color: rgba(204,82,122,0.5); 
+        background-color:  rgb(129, 84, 109);
     }
 
     .blog {
@@ -363,10 +363,7 @@ h3 {
             background-size: cover;
         }
 
-        .commondata{
-            /* margin-left: 0px; */
-            background-color: rgba(204,82,122,0.5);
-        }
+    
         
     }
 }
